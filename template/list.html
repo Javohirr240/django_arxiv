@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xabarlar</title>
+  <link rel="stylesheet" href="{% static 'list.css' %}">
+</head>
+<body>
+<div class="container">
+  <table>
+  <thead>
+    <tr>
+      <th>Ism</th>
+      <th>Familiy</th>
+      <th>Telefon raqam</th>
+      <th>Email</th>
+      <th>Yuborilgan xabar</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for n in new %}
+    <tr>
+      <td>{{ n.firstname }}</td>
+      <td>{{ n.lastname }}</td>
+      <td>{{ n.phone_number }}</td>
+      <td>{{ n.email }}</td>
+      <td>{{ n.message }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+</body>
+</html>

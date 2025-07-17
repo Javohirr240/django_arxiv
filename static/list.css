@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(205, 214, 232);
+    font-family: sans-serif;
+}
+h1{
+    color: #9ca7c9;
+}
+.container{
+    box-sizing: border-box;
+    background-color: white;
+    width: 1140px;
+    margin: 100px auto;
+    padding: 40px;
+    /*border: 1px solid black;*/
+    border-radius: 10px ;
+}
+/* static/css/custom.css */
+
+/* Umumiy jadval stillari */
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse; /* Chegaralar bir-biriga yopishib ko'rinadi */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+table th,
+table td {
+    padding: 0.75rem; /* Ichki bo'shliq */
+    text-align: left; /* Matnni chapga tekislash */
+    border: 1px solid #dee2e6; /* Chegara rangi va qalinligi */
+}
+
+table thead th {
+    background-color: #f8f9fa; /* Sarlavha foni */
+    font-weight: bold;
+    border-bottom: 2px solid #dee2e6; /* Sarlavha ostidagi qalin chegara */
+}

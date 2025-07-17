@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Message</title>
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+<!--  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
+</head>
+<body>
+<div class="container">
+  <h1>Biz bilan bog'lanish</h1>
+    {% if success_message == "Biz bilan bog'langaningiz uchun tashakkur!" %}
+    <div class="alert alert-success">{{ success_message }}</div>
+    {% elif success_message == "Forma to'liq to'ldirilmagan!" %}
+      <div class="alert alert-warning">{{ success_message }}</div>
+    {% endif %}
+    <form action="#" class="form" method="post">{% csrf_token %}
+    <div class="input">
+      <input type="text" placeholder="Ismingizni kiriting" name="firstname">
+      <input type="text" placeholder="Familiyangizni kiriting" name="lastname" class="lastname">
+      <input type="text" placeholder="Telefon raqamingiz" name="phone_number" class="number">
+      <input type="email" placeholder="Elektroni pochtangiz" name="email">
+    </div>
+    <textarea name="message" rows="9  " placeholder="Xabaringizni... "></textarea>
+    <button type="submit">Xabarni jo'natish</button>
+  </form>
+</div>
+<!--<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>-->
+</body>
+</html>
